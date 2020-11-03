@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 
 export default function RootStack() {
 	const backgroundColor = '#042567';
-	const currentRoute = NavigationService.getCurrentRoute();
+	// const currentRoute = NavigationService.getCurrentRoute();
   return (
     <Stack.Navigator headerMode="none">
 			<Stack.Screen

@@ -21,10 +21,9 @@ export default class App extends Component {
           <ThemeProvider theme={themeColor}>
             <NavigationContainer ref={NavigationService.navigationRef}>
               <Stack.Navigator>
-                <Stack.Screen name="rootStack" component={RootStack} />
+                <Stack.Screen name="Root" component={RootStack} />
               </Stack.Navigator>
             </NavigationContainer>
-            <RootStack />
           </ThemeProvider>
         </PersistGate>
       </Provider>
