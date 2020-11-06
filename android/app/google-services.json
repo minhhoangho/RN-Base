@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "328930296839",
+    "firebase_url": "https://mobilebkdn.firebaseio.com",
+    "project_id": "mobilebkdn",
+    "storage_bucket": "mobilebkdn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328930296839:android:c16e77ac266aee962a56a2",
+        "android_client_info": {
+          "package_name": "com.mybase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328930296839-ij5tsnou4bhv4slr5ipo4olg5bfh1o0q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1xAgmv5OTwhGecjXs_P0EeZN-cIvNYCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328930296839-ij5tsnou4bhv4slr5ipo4olg5bfh1o0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
