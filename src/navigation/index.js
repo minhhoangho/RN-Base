@@ -4,6 +4,7 @@ import {
 } from '@react-navigation/stack';
 import Home from '../screens/Home';
 import {NavigationService} from '../utils/navigation'
+import Piano from '../screens/Piano';
 
 const Stack = createStackNavigator();
 
@@ -14,7 +15,7 @@ export default function RootStack() {
     <Stack.Navigator headerMode="none">
 			<Stack.Screen
 				name="Home"
-				component={Home}
+				component={Piano}
       />
     </Stack.Navigator>
   );

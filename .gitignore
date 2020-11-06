@@ -1,7 +1,6 @@
 # OSX
 #
 .DS_Store
-
 # Xcode
 #
 build/
@@ -64,3 +63,4 @@ buck-out/
 /ios/Pods/
 
 __tests__/
+*.hprof

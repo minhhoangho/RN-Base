@@ -20,7 +20,7 @@ export default class App extends Component {
         <PersistGate persistor={persistor}>
           <ThemeProvider theme={themeColor}>
             <NavigationContainer ref={NavigationService.navigationRef}>
-              <Stack.Navigator>
+              <Stack.Navigator headerMode="none">
                 <Stack.Screen name="Root" component={RootStack} />
               </Stack.Navigator>
             </NavigationContainer>
