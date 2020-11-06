@@ -2,42 +2,42 @@ import moment from 'moment';
 import 'moment/locale/vi';
 import _ from 'lodash';
 import DeviceInfo from 'react-native-device-info';
-import { Linking, Platform } from 'react-native';
+import {Linking, Platform} from 'react-native';
 import i18n from 'i18n-js';
 
 // validate fields
-export const validateEmpty = field => {
+export const validateEmpty = (field) => {
   return field !== '';
 };
 
 // validate email
-export const validateEmail = email => {
+export const validateEmail = (email) => {
   const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return regex.test(email);
 };
 
 // validate phone number
-export const validatePhone = phone => {
+export const validatePhone = (phone) => {
   // const regex = /^0(1\d{9}|8\d{8}|9\d{8})$/;
   const regex = /((09|03|07|08|05)+([0-9]{8})\b)$/;
   return regex.test(phone);
 };
 
 // format date
-export const formatDate = date => {
+export const formatDate = (date) => {
   return moment(date).format('DD/MM/YYYY') === moment().format('DD/MM/YYYY')
     ? i18n.translate('time.today')
     : moment(date).format('DD/MM/YYYY hh:mm');
 };
 
 // validate name
-export const validateName = name => {
+export const validateName = (name) => {
   const regex = /^[^0-9 *&^$#@!(){}\[\]\\//]+[^0-9*&^$#@!(){}\[\]\\//]+$/;
   return regex.test(name);
 };
 
 // change alias
-export const changeAlias = alias => {
+export const changeAlias = (alias) => {
   let str = alias;
   str = str.toLowerCase();
   str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ {2}|ặ|ẳ|ẵ/g, 'a');
@@ -49,7 +49,7 @@ export const changeAlias = alias => {
   str = str.replace(/đ/g, 'd');
   str = str.replace(
     /!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'| |\"|\&|\#|\[|\]|~|$|_/g,
-    '-'
+    '-',
   );
   str = str.replace(/-+-/g, '-');
   str = str.replace(/^\-+|\-+$/g, '');
@@ -60,12 +60,12 @@ export const changeAlias = alias => {
 export const getUserPosition = () => {
   return new Promise((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(
-      position => {
+      (position) => {
         resolve(position);
       },
-      error => {
+      (error) => {
         reject(error);
-      }
+      },
     );
   });
 };
@@ -79,7 +79,7 @@ export const formatMoney = (number, n = 2, x = 3) => {
 };
 
 // check image url
-export const checkURLImg = url => {
+export const checkURLImg = (url) => {
   return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
 };
 
@@ -94,13 +94,13 @@ export const openURL = (url, isWeb) => {
     newUrl = `http://${newUrl}`;
   }
   Linking.canOpenURL(newUrl)
-    .then(supported => {
+    .then((supported) => {
       if (!supported) {
       } else {
         return Linking.openURL(newUrl);
       }
     })
-    .catch(err => {});
+    .catch((err) => {});
 };
 
 // format date by locale relative time
@@ -108,7 +108,7 @@ export function formatDateByRelativeTimeLocale(date, locale) {
   moment.locale(locale);
   const diffTime = moment(
     moment(date).format('YYYYMMDD HHmm'),
-    'YYYYMMDD HHmm'
+    'YYYYMMDD HHmm',
   ).fromNow();
   return diffTime;
 }
@@ -121,7 +121,7 @@ export function convertArrayToObject(arr, key) {
       acc[cur[key]] = cur;
       return acc;
     },
-    {}
+    {},
   );
 }
 
@@ -141,7 +141,7 @@ export const hexToRGBA = (hex, opacity) => {
     'rgba(' +
     (hex = hex.replace('#', ''))
       .match(new RegExp('(.{' + hex.length / 3 + '})', 'g'))
-      .map(function(l) {
+      .map(function (l) {
         return parseInt(hex.length % 2 ? l + l : l, 16);
       })
       .concat(opacity || 1)
@@ -151,12 +151,12 @@ export const hexToRGBA = (hex, opacity) => {
 };
 
 // convert hex to rgb
-export const hexToRGB = hex => {
+export const hexToRGB = (hex) => {
   return (
     'rgba(' +
     (hex = hex.replace('#', ''))
       .match(new RegExp('(.{' + hex.length / 3 + '})', 'g'))
-      .map(function(l) {
+      .map(function (l) {
         return parseInt(hex.length % 2 ? l + l : l, 16);
       })
       .join(',') +
@@ -166,4 +166,4 @@ export const hexToRGB = hex => {
 
 // convert rgb to hex
 export const rgbToHex = (r, g, b) =>
-  '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+  '#' + [r, g, b].map((x) => x.toString(16).padStart(2, '0')).join('');

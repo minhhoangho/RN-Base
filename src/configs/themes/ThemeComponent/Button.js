@@ -1,5 +1,5 @@
-import { Color, darkPrimaryColor, lightPrimaryColor } from './Common/Color';
-import { roundedBorderRadius } from './Common/CommonProps';
+import {Color, darkPrimaryColor, lightPrimaryColor} from './Common/Color';
+import {roundedBorderRadius} from './Common/CommonProps';
 
 /**
  * Button

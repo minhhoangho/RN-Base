@@ -10,7 +10,7 @@ module.exports = {
   plugins: ['react', 'react-native'],
   rules: {
     indent: ['error', 2],
-    'linebreak-style': ['warning', 'windows', 'unix'],
+    'linebreak-style': [0, 'windows'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'no-var': ['error'],

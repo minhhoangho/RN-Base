@@ -2,7 +2,11 @@ import React, {Component} from 'react';
 import {View} from 'react-native';
 import {Button, Input} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
-import {setNoteAction,clearNoteAction, saveNoteAction} from '../../redux/diary/actions';
+import {
+  setNoteAction,
+  clearNoteAction,
+  saveNoteAction,
+} from '../../redux/diary/actions';
 
 import {Card} from 'react-native-elements';
 import BottomTab from './container/BottomTab';
@@ -13,22 +17,25 @@ class NewNote extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      titleError:  null,
-      contentError: null
-    }
+      titleError: null,
+      contentError: null,
+    };
   }
   submitForm = () => {
     const data = this.props.currentNote;
-    const {title} = data
+    const {title} = data;
     if (!title) {
-      this.setState({titleError: "Title is not null dude"})
+      this.setState({titleError: 'Title is not null dude'});
     } else {
-      this.props.saveNote()
+      this.props.saveNote();
       const {navigation} = this.props;
-      navigation.navigate({name : "HOME_SCREEN", params: {
-        key: "RETRIEVE_FIREBASE"
-      }})
-      this.props.clearNote()
+      navigation.navigate({
+        name: 'HOME_SCREEN',
+        params: {
+          key: 'RETRIEVE_FIREBASE',
+        },
+      });
+      this.props.clearNote();
     }
   };
   onChangeTitle = (text) => {
@@ -89,7 +96,7 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(clearNoteAction());
   },
   saveNote: () => {
-    dispatch(saveNoteAction())
-  }
+    dispatch(saveNoteAction());
+  },
 });
 export default connect(mapStateToProps, mapDispatchToProps)(NewNote);

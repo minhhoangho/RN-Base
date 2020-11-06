@@ -1,7 +1,5 @@
-import { lightTheme, darkTheme } from './Theme';
+import {lightTheme, darkTheme} from './Theme';
 import Fonts from './Font';
 import Metrics from './Metrics';
 
-export {
-  Fonts, Metrics, lightTheme, darkTheme,
-};
+export {Fonts, Metrics, lightTheme, darkTheme};

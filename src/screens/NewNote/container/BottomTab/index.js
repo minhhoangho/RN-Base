@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {View} from 'react-native';
-import { ButtonGroup} from 'react-native-elements';
+import {ButtonGroup} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/Ionicons';
 import CustomModal from '../Modal';
 import styles from './styles';
@@ -64,12 +64,13 @@ export default class BottomTab extends Component {
           <CustomModal
             visible={true}
             disableVisible={this.disableVisible}
-            type={this.state.selectedIndex !== -1 && tabs[this.state.selectedIndex].type }
+            type={
+              this.state.selectedIndex !== -1 &&
+              tabs[this.state.selectedIndex].type
+            }
           />
         )}
       </View>
     );
   }
 }
-
-

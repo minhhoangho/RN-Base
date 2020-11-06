@@ -1,21 +1,5 @@
 import React, {Component} from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-  Button,
-  Image,
-} from 'react-native';
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {SafeAreaView, View, Text, StatusBar, Button, Image} from 'react-native';
 import {
   GoogleSignin,
   GoogleSigninButton,
@@ -84,10 +68,10 @@ export default class SignIn extends Component {
   onAuthStateChanged = (user) => {
     this.setState({user});
     console.log(user);
-    if (user) this.setState({loggedIn: true});
+    if (user) {
+      this.setState({loggedIn: true});
+    }
   };
-
-  
 
   render() {
     const {loggedIn, user} = this.state;
@@ -120,10 +104,7 @@ export default class SignIn extends Component {
               {user && (
                 <View>
                   <Text>Welcome {user.displayName}</Text>
-                  <Button
-                    onPress={this.signOut}
-                    title="LogOut"
-                    color="red"/>
+                  <Button onPress={this.signOut} title="LogOut" color="red" />
                 </View>
               )}
             </View>

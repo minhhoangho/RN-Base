@@ -16,14 +16,17 @@ import {
   lightPrimaryColor,
   lightSecondaryColor,
 } from './ThemeComponent/Common/Color';
-import { darkText, lightText } from './ThemeComponent/Text';
-import { darkButton, lightButton } from './ThemeComponent/Button';
-import { darkHeader, lightHeader } from './ThemeComponent/Header';
-import { darkInput, lightInput } from './ThemeComponent/Input';
-import { darkCheckBox, lightCheckBox } from './ThemeComponent/ListCheckBox';
-import { darkDropdown, lightDropdown } from './ThemeComponent/Dropdown';
-import { darkModal, lightModal } from './ThemeComponent/Modal';
-import { lightParallaxScrollView, darkParallaxScrollView } from './ThemeComponent/ParallaxScrollView';
+import {darkText, lightText} from './ThemeComponent/Text';
+import {darkButton, lightButton} from './ThemeComponent/Button';
+import {darkHeader, lightHeader} from './ThemeComponent/Header';
+import {darkInput, lightInput} from './ThemeComponent/Input';
+import {darkCheckBox, lightCheckBox} from './ThemeComponent/ListCheckBox';
+import {darkDropdown, lightDropdown} from './ThemeComponent/Dropdown';
+import {darkModal, lightModal} from './ThemeComponent/Modal';
+import {
+  lightParallaxScrollView,
+  darkParallaxScrollView,
+} from './ThemeComponent/ParallaxScrollView';
 
 const ThemeEnum = {
   DARK: 'dark',
@@ -64,8 +67,8 @@ export const darkTheme = {
     platform: darkPlatform,
 
     /**
-    * Component Color
-    */
+     * Component Color
+     */
     bgColor: darkComponentColor.bgColor,
     bgColorSecondary: darkComponentColor.bgColorSecondary,
     textColor: darkComponentColor.textColor,
@@ -147,5 +150,5 @@ export const lightTheme = {
   ParallaxScrollView: lightParallaxScrollView,
 };
 
-export { Color };
+export {Color};
 export default lightTheme;

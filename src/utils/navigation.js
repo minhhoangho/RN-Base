@@ -1,25 +1,35 @@
 import * as React from 'react';
-import { StackActions } from '@react-navigation/native';
-import { Easing } from 'react-native';
+import {StackActions} from '@react-navigation/native';
+import {Easing} from 'react-native';
 
 const navigationRef = React.createRef();
 
-const navigate = (stack, screen) => navigationRef.current && navigationRef.current.navigate(stack, screen);
+const navigate = (stack, screen) =>
+  navigationRef.current && navigationRef.current.navigate(stack, screen);
 
-const getCurrentRoute = () => navigationRef.current && navigationRef.current.getCurrentRoute();
+const getCurrentRoute = () =>
+  navigationRef.current && navigationRef.current.getCurrentRoute();
 
-const canGoBack = () => navigationRef.current && navigationRef.current.canGoBack();
+const canGoBack = () =>
+  navigationRef.current && navigationRef.current.canGoBack();
 
-const getRootState = () => navigationRef.current && navigationRef.current.getRootState();
+const getRootState = () =>
+  navigationRef.current && navigationRef.current.getRootState();
 
 const goBack = () => navigationRef.current && navigationRef.current.goBack();
 
 // eslint-disable-next-line max-len
-const push = (stack, screen) => navigationRef.current &&  navigationRef.current.dispatch(StackActions.push(stack, screen));
+const push = (stack, screen) =>
+  navigationRef.current &&
+  navigationRef.current.dispatch(StackActions.push(stack, screen));
 
-const pop = (count = 1) => navigationRef.current && navigationRef.current.dispatch(StackActions.pop(count));
+const pop = (count = 1) =>
+  navigationRef.current &&
+  navigationRef.current.dispatch(StackActions.pop(count));
 
-const popToTop = () => navigationRef.current && navigationRef.current.dispatch(StackActions.popToTop());
+const popToTop = () =>
+  navigationRef.current &&
+  navigationRef.current.dispatch(StackActions.popToTop());
 
 export const NavigationService = {
   navigationRef,
@@ -37,7 +47,7 @@ export const NavigationService = {
  * Animation
  */
 
-const forFade = ( { current }) => ({
+const forFade = ({current}) => ({
   cardStyle: {
     opacity: current.progress,
   },

@@ -1,12 +1,9 @@
-import { StyleSheet, StatusBar } from "react-native";
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
+import {StyleSheet, StatusBar} from 'react-native';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 export default StyleSheet.create({
-
   container: {
     flex: 1,
-    marginTop: 10
+    marginTop: 10,
   },
   item: {
     // backgroundColor: '#f9c2ff',
@@ -16,26 +13,25 @@ export default StyleSheet.create({
   },
 
   time: {
-    width: 50
+    width: 50,
   },
   title: {
     fontSize: 16,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   content: {
     fontSize: 15,
   },
-  flatListStyle: {
-  },
+  flatListStyle: {},
   floatButton: {
     textAlignVertical: 'center',
     position: 'absolute',
     zIndex: 100,
-    borderColor: "#4FF",
+    borderColor: '#4FF',
     width: 65,
     height: 65,
     bottom: 30,
     right: 30,
-    borderRadius: 30
-  }
+    borderRadius: 30,
+  },
 });

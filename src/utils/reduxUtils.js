@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { call, put, fork, select } from 'redux-saga/effects';
+import {call, put, fork, select} from 'redux-saga/effects';
 // import I18n from 'i18next';
 import _ from 'lodash';
 
@@ -8,25 +8,27 @@ const ERROR_CODE = [401];
 
 export function makeConstantCreator(...params) {
   const constant = {};
-  _.each(params, param => {
+  _.each(params, (param) => {
     constant[param] = param;
   });
   return constant;
 }
 
-export const makeActionCreator = (type, params = null) => ({ type, ...params });
+export const makeActionCreator = (type, params = null) => ({type, ...params});
 
 export const makeReducerCreator = (initialState = null, handlers = {}) => (
   state = initialState,
   action,
 ) => {
-  if (!action && !action.type) return state;
+  if (!action && !action.type) {
+    return state;
+  }
   const handler = handlers[action.type];
   return (handler && handler(state, action)) || state;
 };
 
 export function* apiWrapper(
-  config = { isShowProgress: true, isShowSucceedNoti: false },
+  config = {isShowProgress: true, isShowSucceedNoti: false},
   apiFunc,
   ...params
 ) {
@@ -43,7 +45,7 @@ export function* apiWrapper(
   } catch (err) {
     // notification.destroy();
     console.log(err);
-    
+
     // notification.error({
     //   message: "Error",
     //   description: config.errorDescription || "Lỗi cmnr"|| err.message,

@@ -23,4 +23,4 @@ export const fontSize = {
   xLarge: 20,
 };
 
-export default { fontFamily, fontWeight, fontSize };
+export default {fontFamily, fontWeight, fontSize};

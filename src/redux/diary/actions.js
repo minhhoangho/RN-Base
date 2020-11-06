@@ -7,10 +7,11 @@ export const DiaryTypes = makeConstantCreator(
   'CLEAR_NOTE',
 );
 
+export const getListNoteAction = () =>
+  makeActionCreator(DiaryTypes.GET_LIST_NOTES);
 
-export const getListNoteAction = () => makeActionCreator(DiaryTypes.GET_LIST_NOTES);
-
-export const getListNoteSuccessAction = (data) => makeActionCreator(DiaryTypes.GET_LIST_NOTES_SUCCESS, {data});
+export const getListNoteSuccessAction = (data) =>
+  makeActionCreator(DiaryTypes.GET_LIST_NOTES_SUCCESS, {data});
 
 export const setNoteAction = ({title, content, date, time, color}) =>
   makeActionCreator(DiaryTypes.SET_NOTE, {

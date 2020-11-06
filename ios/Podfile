@@ -8,8 +8,11 @@ target 'MyBase' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+<<<<<<< HEAD
   pod 'RNDateTimePicker', :path => '../node_modules/@react-native-community/datetimepicker'
 
+=======
+>>>>>>> 6d742c010c03e8bf44e8f962a380f80a307d37ad
   target 'MyBaseTests' do
     inherit! :complete
     # Pods for testing

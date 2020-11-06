@@ -1,4 +1,8 @@
-import { darkComponentColor, lightComponentColor, roundedBorderRadius } from './Common/CommonProps';
+import {
+  darkComponentColor,
+  lightComponentColor,
+  roundedBorderRadius,
+} from './Common/CommonProps';
 
 /**
  * Input

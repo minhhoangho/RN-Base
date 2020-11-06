@@ -6,7 +6,7 @@ function* saveNoteToFirebase() {
   const {currentNote} = yield select((state) => {
     return state.diary;
   });
-  console.log("function*saveNoteToFirebase -> currentNote", currentNote)
+  console.log('function*saveNoteToFirebase -> currentNote', currentNote);
 
   yield saveNote(currentNote);
 }

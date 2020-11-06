@@ -1,25 +1,23 @@
-import { StyleSheet } from "react-native";
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
+import {StyleSheet} from 'react-native';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 export default StyleSheet.create({
   body: {
     backgroundColor: Colors.white,
-    height: '100%'
+    height: '100%',
   },
   diaryIcon: {
     marginTop: 100,
     marginBottom: 10,
     height: 400,
     margin: 'auto',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
     flex: 1,
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   sectionTitle: {
     fontSize: 24,

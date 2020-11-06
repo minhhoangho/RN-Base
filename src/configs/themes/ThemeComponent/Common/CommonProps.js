@@ -1,4 +1,4 @@
-import { Platform } from 'react-native';
+import {Platform} from 'react-native';
 // import DeviceInfo from 'react-native-device-info';
 import {
   Color,
@@ -44,7 +44,7 @@ export const shadowViewDark = Platform.select({
   },
   default: {
     shadowColor: 'rgba(119, 119, 119, 0.5)',
-    shadowOffset: { height: 1, width: 1 },
+    shadowOffset: {height: 1, width: 1},
     shadowOpacity: 1,
     shadowRadius: 1,
   },
@@ -56,7 +56,7 @@ export const shadowViewLight = Platform.select({
   },
   default: {
     shadowColor: 'rgba(0,0,0, .4)',
-    shadowOffset: { height: 2, width: 2 },
+    shadowOffset: {height: 2, width: 2},
     shadowOpacity: 1,
     shadowRadius: 1,
     elevation: 4,

@@ -1,4 +1,4 @@
-import { DiaryTypes} from './actions';
+import {DiaryTypes} from './actions';
 import {makeReducerCreator} from '../../utils/reduxUtils';
 
 export const initialState = {
@@ -13,18 +13,27 @@ export const initialState = {
 };
 
 // LIST EVENT
-const setNote = (state, {title=null, content=null, date=new Date(), time=new Date(), color=state.currentNote.color}) => {
+const setNote = (
+  state,
+  {
+    title = null,
+    content = null,
+    date = new Date(),
+    time = new Date(),
+    color = state.currentNote.color,
+  },
+) => {
   let current = {...state.currentNote};
   current = {...current, date, time, color};
 
-  if(title) {
+  if (title) {
     current.title = title || null;
     return {
       ...state,
       currentNote: current,
     };
   }
-  if(content) {
+  if (content) {
     current.content = content || null;
     return {
       ...state,
@@ -37,19 +46,19 @@ const setNote = (state, {title=null, content=null, date=new Date(), time=new Dat
   };
 };
 
-const clearCurrentNote = (state)=> {
-  console.log("clearCurrentNote -> clearCurrentNote")
+const clearCurrentNote = (state) => {
+  console.log('clearCurrentNote -> clearCurrentNote');
   return {
     ...state,
-    currentNote: {...initialState.currentNote}
-  }
-}
-const getListNoteSucess = (state, {data})=> {
+    currentNote: {...initialState.currentNote},
+  };
+};
+const getListNoteSucess = (state, {data}) => {
   return {
     ...state,
-    listNote: data
-  }
-}
+    listNote: data,
+  };
+};
 
 export default makeReducerCreator(initialState, {
   [DiaryTypes.SET_NOTE]: setNote,

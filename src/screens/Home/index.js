@@ -21,7 +21,6 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.props.retrieveNote();
-   
   }
 
   createOne = () => {
@@ -35,7 +34,7 @@ class Home extends Component {
     return (
       <Button
         onPress={() => {
-          this.props.navigation.navigate({name: 'LOGIN'})
+          this.props.navigation.navigate({name: 'LOGIN'});
         }}
         type="clear"
         style={{

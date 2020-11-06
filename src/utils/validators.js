@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 export const PATTERN_NAME = /[a-z ,.'-]+/;
 export const PATTERN_DOB = /\d{1,2}\/\d{1,2}\/\d{4}/;
 export const PATTERN_EMAIL = /\S+@\S+\.\S+/;
@@ -20,15 +19,20 @@ export const DOBValidator = (value) => RegExpValidator(PATTERN_DOB, value);
 
 export const EmailValidator = (value) => RegExpValidator(PATTERN_EMAIL, value);
 
-export const PasswordValidator = (value) => RegExpValidator(PATTERN_PASSWORD, value);
+export const PasswordValidator = (value) =>
+  RegExpValidator(PATTERN_PASSWORD, value);
 
-export const PhoneNumberValidator = (value) => RegExpValidator(PATTERN_PHONE, value);
+export const PhoneNumberValidator = (value) =>
+  RegExpValidator(PATTERN_PHONE, value);
 
-export const SMSCodeValidator = (value) => RegExpValidator(PATTERN_SMS_CODE, value);
+export const SMSCodeValidator = (value) =>
+  RegExpValidator(PATTERN_SMS_CODE, value);
 
-export const CardNumberValidator = (value) => RegExpValidator(PATTERN_CARD_NUMBER, value);
+export const CardNumberValidator = (value) =>
+  RegExpValidator(PATTERN_CARD_NUMBER, value);
 
-export const ExpirationDateValidator = (value) => RegExpValidator(PATTERN_CARD_EXPIRE_DATE, value);
+export const ExpirationDateValidator = (value) =>
+  RegExpValidator(PATTERN_CARD_EXPIRE_DATE, value);
 
 export const CvvValidator = (value) => RegExpValidator(PATTERN_CARD_CVV, value);
 
@@ -40,4 +44,5 @@ export const StringValidator = (value) => !!value && value.length > 0;
 
 export const IDValidator = (value) => RegExpValidator(PATTERN_ID, value);
 
-export const VerifiedEmailCodeValidator = (value) => RegExpValidator(PATTERN_VERIFIED_EMAIL_CODE, value);
+export const VerifiedEmailCodeValidator = (value) =>
+  RegExpValidator(PATTERN_VERIFIED_EMAIL_CODE, value);

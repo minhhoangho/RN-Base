@@ -1,4 +1,4 @@
-import { lightComponentColor, darkComponentColor } from './Common/CommonProps';
+import {lightComponentColor, darkComponentColor} from './Common/CommonProps';
 
 /**
  * ParallaxScrollView

@@ -8,9 +8,9 @@ import AsyncStorage from '@react-native-community/async-storage';
 const transformerConfig = {
   whitelistPerReducer: {
     login: ['data', 'token'],
-    app: ['language']
+    app: ['language'],
   },
-  blacklistPerReducer: {}
+  blacklistPerReducer: {},
 };
 
 export const REDUX_PERSIST = {
@@ -18,10 +18,7 @@ export const REDUX_PERSIST = {
   storage: AsyncStorage,
   version: 1,
   blacklist: ['loadingReducer'],
-  debug: true
+  debug: true,
 };
-
-
-
 
 // export default APP_CONFIG;

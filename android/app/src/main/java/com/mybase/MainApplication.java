@@ -4,7 +4,10 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+<<<<<<< HEAD
 import com.reactcommunity.rndatetimepicker.RNDateTimePickerPackage;
+=======
+>>>>>>> 6d742c010c03e8bf44e8f962a380f80a307d37ad
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;

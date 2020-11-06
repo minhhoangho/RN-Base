@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-import {
-  createStackNavigator, HeaderBackButton,
-} from '@react-navigation/stack';
+import {createStackNavigator, HeaderBackButton} from '@react-navigation/stack';
 import Home from '../screens/Home';
-import {NavigationService} from '../utils/navigation'
+import {NavigationService} from '../utils/navigation';
 import NewNote from '../screens/NewNote';
 
 const Stack = createStackNavigator();
@@ -21,7 +19,7 @@ const Stack = createStackNavigator();
 //       <Stack.Screen
 // 				name="Create new"
 //         component={NewNote}
-        
+
 //       />
 //     </Stack.Navigator>
 //   );

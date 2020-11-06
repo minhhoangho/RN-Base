@@ -36,24 +36,23 @@ export default class App extends Component {
                     headerStyle: {
                       height: 70,
                     },
-
                   }}
                 />
                 <Stack.Screen
                   name="NEW_NOTE"
                   component={NewNote}
                   options={{
-                    title: "New note",
+                    title: 'New note',
                     headerStyle: {
                       height: 70,
                     },
                   }}
                 />
-                 <Stack.Screen
+                <Stack.Screen
                   name="LOGIN"
                   component={SignIn}
                   options={{
-                    title: "Login with google ne",
+                    title: 'Login with google ne',
                   }}
                 />
               </Stack.Navigator>

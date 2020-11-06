@@ -1,4 +1,4 @@
-import { darkComponentColor, lightComponentColor } from './Common/CommonProps';
+import {darkComponentColor, lightComponentColor} from './Common/CommonProps';
 
 /**
  * Header
