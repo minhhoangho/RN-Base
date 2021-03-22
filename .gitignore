@@ -64,3 +64,4 @@ buck-out/
 /ios/Pods/
 
 __tests__/
+java_pid*
